@@ -15,7 +15,7 @@ export default function Login({ setToken }) {
     e.preventDefault(); // Mencegah form melakukan submit secara default yang akan me-refresh halaman
 
     axios
-      .post("https://project-apiif-3-b.vercel.app/api/api/login", {
+      .post("https://apiif3b.vercel.app/api/api/login", {
         // Melakukan request POST ke API login
         email, // Mengirimkan email yang telah dimasukkan pengguna
         password, // Mengirimkan password yang telah dimasukkan pengguna

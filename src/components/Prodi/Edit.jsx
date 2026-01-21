@@ -15,7 +15,7 @@ export default function Edit() {
   // Mengambil data fakultas berdasarkan id ketika komponen pertama kali dimuat
   useEffect(() => {
     axios
-      .get(`https://project-apiif-3-b.vercel.app/api/api/prodi/${id}`) // Mengirimkan request GET untuk mendapatkan data
+      .get(`https://apiif3b.vercel.app/api/api/prodi/${id}`) // Mengirimkan request GET untuk mendapatkan data
       .then((response) => {
         setNama(response.data.result.nama); // Jika sukses, mengisi state 'nama' dengan nama fakultas daro response
         setFakultas(response.data.result.fakulats_id)
@@ -26,7 +26,7 @@ export default function Edit() {
       });
 
       axios
-      .get(`https://project-apiif-3-b.vercel.app/api/api/fakultas`)
+      .get(`https://apiif3b.vercel.app/api/api/fakultas`)
       .then((response) => {
         setListFakultas(response.data.result)
       })
@@ -44,7 +44,7 @@ export default function Edit() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .patch(`https://project-apiif-3-b.vercel.app/api/api/prodi/${id}`, { nama, fakultas_id: fakulats }) //Mengirimkan request Patch untuk mengupdate data fakultas berdasarkan ID
+      .patch(`https://apiif3b.vercel.app/api/api/prodi/${id}`, { nama, fakultas_id: fakulats }) //Mengirimkan request Patch untuk mengupdate data fakultas berdasarkan ID
       .then((response) => {
         Swal.fire({
           title: "Success!",

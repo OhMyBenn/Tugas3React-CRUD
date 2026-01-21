@@ -20,7 +20,7 @@ export default function CreateProdi() {
     const fetchFakultas = async () => {
       try {
         const response = await axios.get(
-          "https://project-apiif-3-b.vercel.app/api/api/fakultas"
+          "https://apiif3b.vercel.app/api/api/fakultas"
         );
         setFakultasList(response.data.result); // Simpan data fakultas ke dalam state
       } catch (error) {
@@ -45,7 +45,7 @@ const handleSubmit = async (e) => {
   try {
     // Melakukan HTTP POST request untuk menyimpan data prodi
     const response = await axios.post(
-      "https://project-apiif-3-b.vercel.app/api/api/prodi", // Endpoint API yang dituju
+      "https://apiif3b.vercel.app/api/api/prodi", // Endpoint API yang dituju
       {
         nama: namaProdi, // Data nama prodi
         fakultas_id: fakultasId, // Data ID fakultas yang dipilih

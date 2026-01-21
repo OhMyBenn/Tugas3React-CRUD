@@ -10,7 +10,7 @@ export default function List() {
     // pangging API Fakultas menggunakan useEffect dan axios
     useEffect(() => {
         axios
-            .get("https://project-apiif-3-b.vercel.app/api/api/fakultas")
+            .get("https://apiif3b.vercel.app/api/api/fakultas")
             .then((response) => {
                 console.log(response.data);
                 setFakultas(response.data.result);
@@ -30,7 +30,7 @@ export default function List() {
         }).then((result) => {
             if (result.isConfirmed) {
                 // panggil axios delete
-                axios.delete(`https://project-apiif-3-b.vercel.app/api/api/fakultas/${id}`)
+                axios.delete(`https://apiif3b.vercel.app/api/api/fakultas/${id}`)
                 .then((response) => {
                     setFakultas(fakulats.filter((data) => data.id !== id))
                 Swal.fire({

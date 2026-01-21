@@ -156,7 +156,7 @@ const App = () => {
           </Routes>
         </Suspense>
 
-        <div>&copy; 2024 Mahasiswa</div>
+        <div>&copy; 2025 Benn</div>
       </div>
     </Router>
   );
